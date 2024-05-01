@@ -23,7 +23,7 @@ Browse our projects to find useful tools, libraries, and applications developed 
 ### Msockperf
 
 - [Documentation](https://github.com/Aetrius/msockperf/blob/main/README.md)
-- [Repository](https://github.com/Aetrius/msockperf/blob/main/README.md)
+- [Repository](https://aetrius.github.io)
 - [Helm](https://github.com/Aetrius/msockperf/blob/main/README.md)
 - Description: Monitoring + SockPerf - Your latency benchmarking tool that runs in pod-to-pod or pod-external or external-to-pod configurations.
 
