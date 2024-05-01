@@ -3,12 +3,12 @@ entries:
   msockperf:
   - apiVersion: v2
     name: msockperf
-    version: 1.0.7
+    version: 1.0.8
     created: 2024-05-01T11:20:31.823462-05:00
     description: Helm chart for deploying Msockperf
     digest: sha:9d94181427ae5dd2aabb98db4e6260d747648a1ddd19f39f0630335c4926a701
     urls:
-    - https://github.com/Aetrius/aetrius.github.io/raw/main/msockperf/charts/msockperf-chart-0.1.7.tgz
+    - https://github.com/Aetrius/aetrius.github.io/raw/main/msockperf/charts/msockperf-chart-0.1.8.tgz
     maintainers:
     - name: Tyler Bennet
       email: tylerwbennet@gmail.com
