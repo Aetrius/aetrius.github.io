@@ -8,7 +8,7 @@ entries:
     description: Helm chart for deploying Msockperf
     digest: sha:43dad81f919b159f9398ecb89e17e59c4f3beab566ab7a8afaca395b1d0bde68 
     urls:
-    - https://github.com/Aetrius/aetrius.github.io/blob/1ee15b7fe2e41fbb1d9bc007db808b318bdb41c0/msockperf/charts/msockperf-chart-0.1.4.gz
+    - https://github.com/Aetrius/aetrius.github.io/blob/main/msockperf/charts/msockperf-chart-01.1.4.gz
     maintainers:
     - name: Tyler Bennet
       email: tylerwbennet@gmail.com
