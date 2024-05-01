@@ -1,0 +1,57 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.msockperf.appName }}
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: {{ .Values.msockperf.appName }}
+spec:
+  replicas: {{ .Values.msockperf.replicaCount }}
+  revisionHistoryLimit: {{ .Values.msockperf.revisionHistoryLimit }}
+  selector:
+    matchLabels:
+      app: {{ .Values.msockperf.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.msockperf.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.msockperf.appName }}
+        imagePullPolicy: {{ .Values.msockperf.imagePullPolicy }}
+        image: {{ .Values.msockperf.image }}
+        env:
+        - name: MSOCK_NAMESPACE
+          value: "{{ .Values.msockperf.namespace }}"
+        - name: MSOCK_REMOTE_HOST
+          value: "{{ .Values.msockperf.remoteHost }}"
+        - name: MSOCK_REMOTE_PORT
+          value: "{{ .Values.msockperf.remotePort }}"
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP # Expose pod's IP address
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName # Expose node name
+        ports:
+        - name: web #web interface
+          containerPort: {{ .Values.msockperf.webPort }}
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 400Mi
+        readinessProbe:
+          httpGet:
+            path: /metrics
+            port: {{ .Values.msockperf.webPort }}
+          initialDelaySeconds: 2
+          periodSeconds: 2
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3

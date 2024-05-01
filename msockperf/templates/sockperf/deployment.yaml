@@ -1,0 +1,41 @@
+{{- if .Values.msockperf }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.sockperfServer.appName }}
+  namespace: {{ .Values.namespace.name }}
+  labels:
+    app: {{ .Values.sockperfServer.appName }}
+spec:
+  replicas: {{ .Values.sockperfServer.replicaCount }}
+  revisionHistoryLimit: {{ .Values.sockperfServer.revisionHistoryLimit }}
+  selector:
+    matchLabels:
+      app: {{ .Values.sockperfServer.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.sockperfServer.appName }}
+    spec:
+      containers:
+      - name: {{ .Values.sockperfServer.appName }}
+        imagePullPolicy: Always
+        image: {{ .Values.sockperfServer.image }}
+        command: ["/bin/bash", "-c", "sockperf server -p {{ .Values.sockperfServer.sockperfPort }} -i $(POD_IP) --tcp"]
+        ports:
+        - name: msockperf #web interface
+          containerPort: {{ .Values.sockperfServer.sockperfPort }}
+        # command: ["./msockperf"]
+        env:
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 150m
+            memory: 120Mi
+{{- end }}
