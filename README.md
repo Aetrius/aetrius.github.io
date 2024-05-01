@@ -1,6 +1,7 @@
 # Welcome to aetrius.github.io!
 
 SRE / DEVELOPMENT / DEVOPS / TOOLING / OBSERVABILITY / AUTOMATION
+
 This repository hosts the documentation and resources for Aetrius projects and Helm charts.
 
 ## Table of Contents
