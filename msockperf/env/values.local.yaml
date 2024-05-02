@@ -20,7 +20,7 @@ portworx:
 
 rancher:
   enabled: false
-  projectID: default
+  projectID: "default:defaulot"
 
 msockperf:
   serviceName: msockperf-service
