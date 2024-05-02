@@ -3,7 +3,7 @@ entries:
   msockperf:
   - apiVersion: v2
     name: msockperf
-    version: 2.0.0
+    version: 2.0.2
     created: 2024-05-02T08:03:31.823462-05:00
     description: Helm chart for deploying Msockperf
     digest: sha:857190a192d6825ecc0da917f327a9494eeb8e956a11cc61d174a808c6824c30
