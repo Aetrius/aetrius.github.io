@@ -10,7 +10,7 @@ labels:
   owner: "sre"
 
 ingress:
-  enabled: true
+  enabled: false
 
 servicemonitor:
   enabled: true
@@ -19,7 +19,7 @@ portworx:
   enabled: false
 
 rancher:
-  enabled: true
+  enabled: false
   projectID: 
 
 msockperf:

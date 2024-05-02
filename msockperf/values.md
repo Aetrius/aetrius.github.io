@@ -11,7 +11,7 @@
 - **Owner Label**: "sre"
 
 # Ingress Configuration
-- **Ingress Enabled**: true
+- **Ingress Enabled**: false
 
 # ServiceMonitor Configuration
 - **ServiceMonitor Enabled**: true
@@ -20,7 +20,7 @@
 - **Portworx Enabled**: false
 
 # Rancher Configuration
-- **Rancher Enabled**: true
+- **Rancher Enabled**: false
 - **Rancher Project ID**: [empty]
 
 # msockperf Configuration
