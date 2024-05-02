@@ -18,9 +18,9 @@ servicemonitor:
 portworx:
   enabled: false
 
-rancher:
-  enabled: false
-  projectID: "default:defaulot"
+# rancher:
+#   enabled: false
+#   projectID: "default:default"
 
 msockperf:
   serviceName: msockperf-service
