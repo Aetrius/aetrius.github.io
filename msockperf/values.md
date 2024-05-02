@@ -21,7 +21,7 @@
 
 # Rancher Configuration
 - **Rancher Enabled**: false
-- **Rancher Project ID**: [empty]
+- **Rancher Project ID**: "default"
 
 # msockperf Configuration
 - **Service Name**: msockperf-service

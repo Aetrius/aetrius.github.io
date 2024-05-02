@@ -9,7 +9,7 @@ metadata:
     field.cattle.io/projectId: {{ .Values.rancher.projectID}}
     {{- end }}
   labels:
-    {{- if .Values.rancher.enabled }}
+    {{- if .Values.portworx.enabled }}
     pds.portworx.com/available: "false"
     {{- end }}
     {{- if .Values.rancher.enabled }}
