@@ -6,7 +6,7 @@ entries:
     version: 2.0.6
     created: 2024-05-02T22:43:31.823462-05:00
     description: Helm chart for deploying Msockperf
-    digest: sha:6dc7bb85323df7e87962b1d9bfe86fcd6dd70e6acc7f75a9d4f3ae65b7f21a4e
+    digest: sha:b7f83fbad8f7c7091383ac986e914edeb091bfa58491b80fd5fe93e6a7c3a0c8
     urls:
     - https://github.com/Aetrius/aetrius.github.io/raw/main/msockperf/charts/msockperf-chart-0.2.6.tgz
     maintainers:

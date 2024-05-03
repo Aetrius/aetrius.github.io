@@ -1,7 +1,7 @@
 # Namespace Configuration
 - **Namespace Creation**:
   - Enabled: true
-- **Namespace Name**: sre-msockperf-exporter
+- **Namespace Name**: sre-msockperf
 
 # Environment Domain Configuration
 - **Environment Domain**: msockperf.domainname.com

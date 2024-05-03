@@ -3,7 +3,7 @@ namespace:
   # Whether to enable namespace creation
   enabled: true
   # Name of the namespace
-  name: sre-msockperf-exporter
+  name: sre-msockperf
 
 # Domain name for environment
 environmentDomain: msockperf.domainname.com
