@@ -1,7 +1,7 @@
 ---
 namespace:
   enabled: true
-  name: sre-msockperf-exporter
+  name: sre-msockperf
 
 environmentDomain: msockperf.domainname.com
 

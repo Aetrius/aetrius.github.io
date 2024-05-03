@@ -2,15 +2,15 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: {{ .Values.namespace.name }}
+  name: {{ .Values.namespace.name | default "sre-msockperf" }}
   annotations:
     {{- if and .Values.namespace.name .Values.rancher.enabled }}
-    field.cattle.io/projectId: {{ .Values.rancher.projectID }}
-    field.cattle.io/projectName: {{ .Values.rancher.projectName }}
+    field.cattle.io/projectId: {{ .Values.rancher.projectID | default "default:default"  }}
+    field.cattle.io/projectName: {{ .Values.rancher.projectName | default "default" }}
     {{- end }}
   labels:
     {{- if and .Values.namespace.name .Values.portworx.enabled }}
-    pds.portworx.com/available: "false"
+    pds.portworx.com/available: "{{ .Values.portworx.enabled }}"
     {{- end }}
     {{- if and .Values.namespace.name .Values.rancher.enabled }}
     owner: {{ .Values.labels.owner }}
