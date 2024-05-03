@@ -34,8 +34,10 @@ portworx:
 rancher:
   # Whether to enable Rancher
   enabled: false
-  # Rancher project ID
+  # Rancher Project ID
   projectID: "default:default"
+  # Rancher Project Name
+  projectName: "default"
 
 # msockperf configuration
 msockperf:

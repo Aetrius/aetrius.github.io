@@ -1,14 +1,18 @@
-{{- if .Values.namespace.enabled }}
+{{- if .Values.namespace }}
 apiVersion: v1
 kind: Namespace
 metadata:
   name: {{ .Values.namespace.name }}
-  #annotations:
+  annotations:
+    {{- if and .Values.namespace.name .Values.rancher.enabled }}
+    field.cattle.io/projectId: {{ .Values.rancher.projectID }}
+    field.cattle.io/projectName: {{ .Values.rancher.projectName }}
+    {{- end }}
   labels:
-    {{- if .Values.portworx.enabled }}
+    {{- if and .Values.namespace.name .Values.portworx.enabled }}
     pds.portworx.com/available: "false"
     {{- end }}
-    {{- if .Values.rancher.enabled }}
-    owner: {{ .Values.labels.owner}}
+    {{- if and .Values.namespace.name .Values.rancher.enabled }}
+    owner: {{ .Values.labels.owner }}
     {{- end }}
 {{- end }}
