@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.sockperfServer.serviceName }}
-  namespace: {{ .Values.namespace.name | default "sre-msockperf" }}
+  namespace: {{ .Values.Namespace | default "sre-msockperf" }}
 spec:
   ports:
   - port: {{ .Values.sockperfServer.webPort }}

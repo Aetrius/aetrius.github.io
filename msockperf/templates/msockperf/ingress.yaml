@@ -4,7 +4,7 @@ kind: Ingress
 metadata:
   annotations:
   name: {{ .Values.msockperf.appName }}-ingress
-  namespace: {{ .Values.namespace.name | default "sre-msockperf" }}
+  namespace: {{ .Values.Namespace | default "sre-msockperf" }}
 spec:
   ingressClassName: nginx
   rules:

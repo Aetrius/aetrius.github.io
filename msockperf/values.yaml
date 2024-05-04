@@ -1,10 +1,3 @@
-# Namespace configuration
-namespace:
-  # Whether to enable namespace creation
-  enabled: true
-  # Name of the namespace
-  name: sre-msockperf
-
 # Domain name for environment
 environmentDomain: msockperf.domainname.com
 
@@ -30,15 +23,6 @@ portworx:
   # Whether to enable Portworx
   enabled: false
 
-# Rancher configuration
-rancher:
-  # Whether to enable Rancher
-  enabled: false
-  # Rancher Project ID
-  projectID: "default:default"
-  # Rancher Project Name
-  projectName: "default"
-
 # msockperf configuration
 msockperf:
   # Service name
@@ -56,7 +40,7 @@ msockperf:
   # Namespace for msockperf
   namespace: default
   # Remote host
-  remoteHost: sockperf-server-service.sre-msockperf-exporter
+  remoteHost: sockperf-server-service.sre-msockperf
   # Remote port
   remotePort: 3600
   # Service port

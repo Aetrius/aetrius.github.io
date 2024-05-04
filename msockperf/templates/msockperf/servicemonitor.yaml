@@ -3,7 +3,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: {{ .Values.msockperf.appName }}-monitor
-  namespace: {{ .Values.namespace.name | default "sre-msockperf" }}
+  namespace: {{ .Values.Namespace | default "sre-msockperf" }}
   labels:
     app: {{ .Values.msockperf.appName }}
 spec:

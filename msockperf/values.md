@@ -1,7 +1,3 @@
-# Namespace Configuration
-- **Namespace Creation**:
-  - Enabled: true
-- **Namespace Name**: sre-msockperf
 
 # Environment Domain Configuration
 - **Environment Domain**: msockperf.domainname.com
@@ -31,7 +27,7 @@
 - **Revision History Limit**: 0
 - **Web Port**: 8082
 - **Namespace**: default
-- **Remote Host**: sockperf-server-service.sre-msockperf-exporter
+- **Remote Host**: sockperf-server-service.sre-msockperf
 - **Remote Port**: 3600
 - **Service Port**: 8000
 - **Image Pull Policy**: Always
