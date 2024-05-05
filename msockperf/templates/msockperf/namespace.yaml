@@ -1,9 +1,12 @@
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: msockperf
-#   # labels:
-#   #   app.kubernetes.io/managed-by: Helm
-#   annotations:
-#     meta.helm.sh/release-name: msockperf
-#     meta.helm.sh/release-namespace: msockperf
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: msockperf
+  labels:
+    {{- if .Values.rancher.enabled }}
+    field.cattle.io/projectId: {{ .Values.rancher.projectId }}
+    {{- end }}
+  annotations:
+    {{- if .Values.rancher.enabled }}
+    field.cattle.io/projectId: "{{ .Values.rancher.clusterId }}:{{ .Values.rancher.projectId }}"
+    {{- end }}

@@ -3,7 +3,7 @@ helm package msockperf
 
 mkdir charts
 
-mv msockperf-chart-0.1.5.tgz charts/msockperf-chart-.0.1.92.tgz
+mv msockperf-chart-0.1.5.tgz charts/msockperf-chart-.0.2.6.tgz
 
 cp infra/k8s/base/app/msockperf-chart/index.yaml index.yaml
 

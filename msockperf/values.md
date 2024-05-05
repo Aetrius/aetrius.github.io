@@ -1,3 +1,6 @@
+# Namespace Configuration
+- **Enabled**: "sre-msockperf"
+- **Label**: true
 
 # Environment Domain Configuration
 - **Environment Domain**: msockperf.domainname.com
@@ -17,7 +20,9 @@
 
 # Rancher Configuration
 - **Rancher Enabled**: false
-- **Rancher Project ID**: "default"
+- **Rancher Project ID**: "p-fqknq"
+- **Rancher Cluster ID**: "c-m-zzth7c2f"
+
 
 # msockperf Configuration
 - **Service Name**: msockperf-service

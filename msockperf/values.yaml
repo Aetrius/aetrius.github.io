@@ -1,3 +1,14 @@
+#namespace
+namespace:
+  enabled: true
+  name: msockperf
+
+# rancher configs
+rancher:
+  enabled: false
+  projectId: "c-m-zzth7c2f"
+  clusterId: "p-fqknq"
+
 # Domain name for environment
 environmentDomain: msockperf.domainname.com
 
