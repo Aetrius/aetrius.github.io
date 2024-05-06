@@ -1,8 +1,8 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{ .Values.serviceName }}
-  namespace: {{ .Values.namespace.name }}
+  name: msockperf-service-monitor
+  namespace: msockperf
 spec:
   endpoints:
     - interval: 15s
@@ -10,7 +10,7 @@ spec:
       scrapeTimeout: 14s
   namespaceSelector:
     matchNames:
-      - {{ .Values.namespace.name }}
+      - msockperf
   selector:
     matchLabels:
-      app.kubernetes.io/part-of: {{ .Values.msockperf.appName}}
+      app.kubernetes.io/part-of: msockperf-app
