@@ -3,10 +3,10 @@ entries:
   msockperf:
   - apiVersion: v2
     name: msockperf
-    version: 2.0.7
+    version: 2.0.8
     created: 2024-05-05T21:19:31.823462-05:00  # Update this date to the current date/time when the new version is packaged
     description: Helm chart for deploying Msockperf
-    digest: sha:b5292061f441aae05f0668a70ddfb4bfedfac0fd309d72a57cb6b926d59350a8  # Update this to the new digest for the 2.7 package
+    digest: sha:ce8cbad7e91ec212070bf7e6359b9a6bc03416f11b13a04d62888439806c1bf9  # Update this to the new digest for the 2.7 package
     urls:
     - https://github.com/Aetrius/aetrius.github.io/raw/main/msockperf/charts/msockperf-chart-0.2.7.tgz
     maintainers:

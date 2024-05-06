@@ -6,5 +6,8 @@
 
         helm upgrade msockperf msockperf -f msockperf/env/values.local.yaml --namespace msockperf  
 
+
+        helm install msockperf aetrius/msockperf -f config.yaml --namespace msockperf
+
     `
 
