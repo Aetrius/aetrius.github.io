@@ -51,7 +51,7 @@ msockperf:
   # Namespace for msockperf
   namespace: default
   # Remote host
-  remoteHost: sockperf-server-service.sre-msockperf
+  remoteHost: sockperf-server-service.msockperf
   # Remote port
   remotePort: 3600
   # Service port
