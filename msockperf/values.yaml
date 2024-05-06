@@ -55,7 +55,7 @@ msockperf:
   # Remote port
   remotePort: 3600
   # Service port
-  servicePort: 8000
+  servicePort: 8082
   # Image pull policy
   imagePullPolicy: Always
 

@@ -1,17 +1,16 @@
-{{- if .Values.servicemonitor.enabled }}
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: {{ .Values.msockperf.appName }}-monitor
-  namespace: {{ .Values.Namespace | default "msockperf" }}
-  labels:
-    app: {{ .Values.msockperf.appName }}
+  name: {{ .Values.serviceName }}
+  namespace: {{ .Values.namespace.name }}
 spec:
+  endpoints:
+    - interval: 15s
+      port: web
+      scrapeTimeout: 14s
+  namespaceSelector:
+    matchNames:
+      - {{ .Values.namespace.name }}
   selector:
     matchLabels:
-      app: {{ .Values.msockperf.appName }}
-  endpoints:
-  - port: web
-    path: /metrics
-    interval: 15s
-{{- end }}
+      app.kubernetes.io/part-of: {{ .Values.msockperf.appName}}

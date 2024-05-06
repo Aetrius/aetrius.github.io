@@ -1,17 +1,16 @@
-apiVersion: v1
-kind: Service
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
 metadata:
   name: {{ .Values.msockperf.serviceName }}
-  namespace: {{ .Values.Namespace | default "msockperf" }}
+  namespace: {{ .Values.namespace.name }}
 spec:
-  ports:
-  - port: {{ .Values.msockperf.servicePort }}
-    targetPort: {{ .Values.msockperf.webPort }}
-    protocol: TCP
-    name: web 
+  endpoints:
+    - interval: 15s
+      port: web
+      scrapeTimeout: 14s
+  namespaceSelector:
+    matchNames:
+      - {{ .Values.namespace.name }}
   selector:
-    app: {{ .Values.msockperf.appName }}
-  sessionAffinity: None
-  type: ClusterIP
-status:
-  loadBalancer: {}
+    matchLabels:
+      app.kubernetes.io/part-of: {{ .Values.namespace.name }}
